@@ -1,20 +1,14 @@
- პროექტი არის დავალებების მართვის და თვითანალიზის აპლიკაცია. ეს აპლიკაცია შეიქმნა PyQt5-ის გამოყენებით და მისი მთავარი მიზანია დავალებების მარტივად დამატება, რედაქტირება, წაშლა და ამასთან ერთად — 
- პროდუქტიულობის და განწყობის ანალიზი.
+This project is a task management and self-analysis application developed using PyQt5. Its main goal is to allow users to easily add, edit, and delete tasks, while also analyzing productivity and mood patterns.
 
-აპლიკაციას აქვს მარტივი ინტერფეისი, სადაც მე, როგორც მომხმარებელმა, შემიძლია დავამატო ნებისმიერი დავალება, დავწერო აღწერა, ავირჩიო კონკრეტული თარიღი, განწყობა და მივანიჭო პროდუქტიულობის ქულა. 
-ეს ყველაფერი ინახება SQLite ბაზაში, რაც იმას ნიშნავს, რომ ინფორმაცია არ იშლება და ყოველთვის ხელმისაწვდომია.
+The application features a simple and user-friendly interface where users can add tasks, write descriptions, select specific dates, choose their mood, and assign a productivity score. All data is stored in an SQLite database, ensuring that information is persistent and always accessible.
 
-ბაზასთან მუშაობისთვის გამოიყენება ცალკე კლასი — Database, სადაც თავმოყრილია ყველა CRUD ოპერაცია, ანუ დავალების შექმნა, წაკითხვა, განახლება და წაშლა. ეს მეთოდები შემდეგ ვიყენებ ძირითად UI-ში, 
-რომელიც აგებულია PyQt-ის კომპონენტებით — მაგალითად QTableWidget, QPushButton, QLineEdit და ა.შ.
+Database operations are handled through a dedicated Database class, which contains all CRUD operations (Create, Read, Update, Delete). These methods are used in the main UI, which is built with PyQt components such as QTableWidget, QPushButton, QLineEdit, and others.
 
-ამ აპლიკაციის ერთ-ერთი ყველაზე საინტერესო და გამოსადეგი ნაწილი არის სტატისტიკის ჩანართი, სადაც ხედავ გრაფიკულად თქვენს პროდუქტიულობასა და განწყობებს. აქ ვიყენებ matplotlib-ს. მაგალითად, 
-სვეტოვანი გრაფიკი აჩვენებს, რომელი განწყობის დროს ხართ უფრო პროდუქტიული. ხაზოვანი გრაფიკი გაძლევთ შესაძლებლობას ნახოთ, როგორ იცვლებოდა პროდუქტიულობა დროთა განმავლობაში, ხოლო წრიული 
-დიაგრამა გეხმარებათ გაიგოთ, რომელი განწყობა ჭარბობს თქვენს დღიურებში.
+One of the most valuable features of the application is the Statistics tab, which visually displays productivity and mood data using Matplotlib. A bar chart shows which moods are associated with higher productivity, a line chart tracks productivity trends over time, and a pie chart highlights the most frequent moods in the user’s records.
 
-ეს ყველაფერი არა მხოლოდ ტექნიკურად სასარგებლოა, არამედ რეალურად გეხმარებათ პროდუქტიულობაში. მარტივად ხვდებით, რომელ დღეებში მუშაობთ უკეთესად, რა განწყობა გაძლევთ მეტ მოტივაციას და 
-რომელი ტიპის დღეებში გჭირდებათ მეტი დასვენება ან ცვლილება.
+Beyond its technical implementation, the application is designed to provide real value by helping users understand their working patterns. It allows users to identify their most productive days, recognize which moods increase motivation, and understand when rest or change is needed.
 
-კოდს რაც შეეხება, მაქსიმალურად არის გამოყენებული ობიექტზე ორიენტირებული სტრუქტურა — ფუნქციონალი დაყოფილია ცალკე ფაილებში: MainWindow.py-ში არის დიზაინის და ლოგიკის ნაწილი, 
-database.py-ში — მონაცემების მართვა და charts.py-ში — გრაფიკების დახაზვა.
+From a code structure perspective, the project follows object-oriented design principles and is organized into separate modules:
+MainWindow.py handles the UI and application logic, database.py manages data storage, and charts.py is responsible for data visualization.
 
-მოკლედ რომ ვთქვა, ეს აპლიკაცია არის ერთგვარი თვითანალიზის და ორგანიზების ხელსაწყო, რომელიც ტექნოლოგიების საშუალებით გეხმარებათ იყოთ უფრო პროდუქტიული და ფოკუსირებული.
+In summary, this application serves as a personal organization and self-reflection tool that uses technology to help users become more productive and focused.
